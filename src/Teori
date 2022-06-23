@@ -1,0 +1,92 @@
+ Nama : Nurul Febi Anisa
+ NIM  : 21090032
+ Kelas: 2 C
+ MK   : Algoritma dan Struktur data 2
+
+ Jawaban no 1
+ 1.Binary Seacrh Tree (BST) yang maksimal node disstiap root adalah 2, Node can be modified as not as long
+ as node has a value. root is considering as node. node mempunyai key, node left, node right.
+
+ Langkah-langkah untuk menemukan data dengan nama SIGRA yaitu :
+ 1. Untuk mencari nilai atau data jika terdapat array maka bisa melakukan pencarian biner.
+ 2. Mendefinisikan daftar nilai atau data untuk mencari data yang kitakiri inginkan yaitu SIGRA
+ 3. Bandingkan angka atau data yang akan dicari dengan data tengah dan dicari yang lebih kecil dari data tengah atau
+ mencari dibagian kiri atau kanan
+ 4. Pada pencarian data dimulai dengan pencarian data, dari tengah jika di tengah tidak ada maka dicari dikiri ataupun
+ di kanan sampai kiyta menemukan data yang kita cari.
+ 5. Yang utama dalam pencarian data BST yaitu kita mencari ke subtree kiri karena di pohon pencarian biner semua data
+ di subtree kiri lebih kecil dan semua elemen di subtree kanan lebih besar dan langkah tersebut diulang-ulang sampai menemukan
+ SIGRA
+ Kemungkinan pada level 4 karena dapat terdapat pada urutan ke 4 , pada level 4 atau level lebih dari 4 data
+ SIGRA akan ditemukan
+
+ Jawaban no 2
+
+     private int partition (int start, int end) {
+     int pivot = this.data[end];
+     int i = (start - 1);
+     for (int j = start; j <= end - 1; j++){
+     if (this.data[j]) < pivot) {
+     i++;
+     int t = this.data[i];
+     this.data[i] = this.data[j];
+     this.data[j] = t;
+     }
+   }
+   int t = this.data[i+1];
+   this.data[i+1] = this.data[end];
+   this.data[end] = t;
+   return (i + 1 );
+   }
+
+ perhitungan urutan pada p=5
+  P = 5
+  if (a [j] < 56) -> if(a[0] < 56)
+      i = i + 1 -> i =0 ;
+      int t = a[i] -> t = a[0];
+                       t = 2
+      a[i] = a[j] -> a [0] = a[j];
+                      a [0] = 2
+
+                      a= 2, 18, 1, 0, 56, 76, 98, 34, 12
+
+
+   J = 1
+   if (a [j] < 56) -> if(a[1] < 56)
+       i = i + 1 -> i =0 ;
+       int t = a[i] -> t = a[1];
+                        t = 18
+       a[i] = a[j] -> a [1] = a[j];
+                       a [1] = 18
+
+                       a= 2, 18, 1, 0, 56, 76, 98, 34, 12
+
+  J = 2
+  if (a [j] < 56) --> if(a[2] < 56)
+      i = i + 1 --> i = 0;
+      int t = a[i] -> t = a[2];
+                       t = 1
+      a[i] = a[j] -> a [2] = a[j];
+                      a [2] = 2
+
+                      a= 2, 18, 1, 0, 56, 76, 98, 34, 12
+
+   J = 3
+   if (a [j] < 56) --> if(a[3] < 56)
+       i = i + 1 --> i = 0;
+       int t = a[i] -> t = a[3];
+                        t = 0
+       a[i] = a[j] -> a [3] = a[j];
+                       a [3] = 0
+
+                       a= 2, 18, 1, 0, 56, 76, 98, 34, 12
+
+  J = 4
+   if (a [j] < 56) -> if(a[4] < 56)
+       i = i + 1 -> i = 0;
+       int t = a[i] --> t = a[4];
+                        t = 56
+       a[i] = a[j] -> a [4] = a[j];
+                       a [4] = 56
+
+                       a= 2, 18, 1, 0, 56, 76, 98, 34, 12
